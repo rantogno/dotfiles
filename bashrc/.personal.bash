@@ -13,3 +13,28 @@ fi
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoreboth:erasedups
+
+function proxy_update() {
+   if [ -f "$HOME/.config/intel.proxy" ]; then
+      export http_proxy="http://proxy.jf.intel.com:911/"
+      export https_proxy="http://proxy.jf.intel.com:911/"
+      export ftp_proxy="http://proxy.jf.intel.com:911/"
+   else
+      unset http_proxy
+      unset https_proxy
+      unset ftp_proxy
+   fi
+}
+
+function proxy_on() {
+   mkdir -p $HOME/.config
+   echo 1 > $HOME/.config/intel.proxy
+   proxy_update
+}
+
+function proxy_off() {
+   rm $HOME/.config/intel.proxy
+   proxy_update
+}
+
+proxy_update
