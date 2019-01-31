@@ -1,0 +1,4 @@
+bashrc:
+
+   Add to .bashrc:
+     [ -f ~/.personal.bash ] && source ~/.personal.bash
