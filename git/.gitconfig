@@ -1,0 +1,19 @@
+[user]
+	name = Someone
+	email = someone@example.com
+
+[core]
+   editor = nvr -cc split --remote-wait-silent +'set bufhidden=delete'
+	excludesfile = /home/rantogno/.gitignore
+	autocrlf = false
+	filemode = false
+	deltaBaseCacheLimit = 1G
+
+[color]
+	ui = true
+
+[alias]
+	se = series
+
+[include]
+	path = ~/.gitauthor
