@@ -19,10 +19,12 @@ function proxy_update() {
       export http_proxy="http://proxy.jf.intel.com:911/"
       export https_proxy="http://proxy.jf.intel.com:911/"
       export ftp_proxy="http://proxy.jf.intel.com:911/"
+      export no_proxy="localhost,127.0.0.0,127.0.1.1,127.0.1.1,local.home,.intel.com"
    else
       unset http_proxy
       unset https_proxy
       unset ftp_proxy
+      unset no_proxy
    fi
 }
 
